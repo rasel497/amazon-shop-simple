@@ -4,7 +4,7 @@ import './Product.css'
 const Product = (props) => {
     // props call korer age amra destructuring kore nibo shortcut er jonno
     const { name, img, seller, price, ratings } = props.product;
-
+    const { handleAddToCart } = props;
 
     return (
         <div className='product'>
@@ -16,6 +16,9 @@ const Product = (props) => {
                 <p><small>Ratings: {ratings} starts</small></p>
             </div>
 
+            <button onClick={() => props.handleAddToCart(props.product)} className='btn-cart'>
+                <p>Add To Cart</p>
+            </button>
         </div>
     );
 };
