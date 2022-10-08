@@ -3,7 +3,7 @@ import './Cart.css'
 
 const Cart = (props) => {
     // tota price add OMG very easy wayyyyy
-    const { cart } = props;
+    const { cart, clearCart, children } = props;
     let total = 0;
     let shipping = 0;
     let quantity = 0;
@@ -27,6 +27,8 @@ const Cart = (props) => {
             <p>Total Shipping:  ${shipping}</p>
             <p>Tax/VAT: ${tax}</p>
             <h5>Grand Total: ${grandTotal}</h5>
+            <button onClick={clearCart}>Clear cart</button>
+            {children}
         </div>
     );
 };
