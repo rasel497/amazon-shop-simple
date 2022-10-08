@@ -1,7 +1,6 @@
 import { getStoreCart } from "../utilities/fakedb";
 
 export const productsAndCartLoader = async () => {
-
     //get Products
     const productsData = await fetch('products.json');
     const products = await productsData.json();
@@ -20,7 +19,6 @@ export const productsAndCartLoader = async () => {
             // console.log(id, quantity);
             addedProduct.quantity = quantity;
             initialCart.push(addedProduct);
-
         }
     }
 
